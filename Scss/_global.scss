@@ -1,0 +1,139 @@
+/* Variable & Html & Body Scss */
+:root{
+  --primary-white:#fff;
+  --secondary-white:#aaa;
+  --font-color:#aaa;
+  --title-color:#484848;
+  --body-color:#666;
+  --pink:#f32853;
+  --hover-color:#f21040;
+  --main-font:'Raleway', sans-serif;
+  --border-cricle:4px;
+}
+
+html{
+  font-size:16px;
+  font-family:var(--main-font);
+  line-height:1.5;
+  color:var(--body-color);
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow-x:hidden;
+}
+
+/* Variable & Html & Body Scss End */
+
+/* Layout Scss */
+.row{
+  margin-right:-15px;
+  margin-left:-15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container{
+  width:100%;
+  padding-right:15px;
+  padding-left:15px;
+  margin-right:auto;
+  margin-left: auto;
+  @media(min-width: 576px){
+    max-width: 540px;
+  }
+  @media(min-width:768px){
+    max-width:720px;
+  }
+  @media(min-width:992px){
+    max-width: 960px;
+  }
+  @media(min-width:1200px){
+    max-width:1140px;
+  }
+}
+
+.container-w960{
+  width:100%;
+  padding-right:15px;
+  padding-left:15px;
+  margin-right:auto;
+  margin-left: auto;
+  @media(min-width:992px){
+    max-width:960px;
+  }
+}
+
+.col-md-6 , .col-md-12{
+  position: relative;
+  width:100%;
+  padding-right:15px;
+  padding-left:15px;
+}
+@media(min-width:768px){
+  .col-md-6{
+    flex:0 0 50%;
+    max-width:50%;
+  }
+  .col-md-12{
+    flex: 0 0 100%;
+    max-width:100%;
+  }
+}
+/* Layout Scss End */
+
+/* Button Scss */
+.main-button{
+  display:inline-flex;
+  align-items: center;
+  text-align: center;
+  padding:1.2rem 2.5rem 1.2rem 2.5rem;
+  text-decoration:none;
+  color:var(--primary-white);
+  background-color:var(--pink);
+  border-radius:var(--border-cricle);
+  transition:all .2s ease-in;
+  text-transform: uppercase;
+  font-weight:bold;
+  &:hover{
+    background-color:var(--hover-color);
+  }
+  @media(max-width:991.98px){
+    padding:1rem;
+  }
+}
+.scroll-top-button{
+  position: fixed;
+  bottom:50px;
+  right:20px;
+  width:2.5rem;
+  height:2.5rem;
+  border-radius:50%;
+  background-color:#222;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  visibility:hidden;
+  opacity:0;
+  transition: all .5s ease-in;
+  cursor: pointer;
+  .scroll-top-content{
+    color:var(--primary-white);
+  }
+}
+.scroll-top-active{
+  visibility:visible;
+  opacity: 1;
+}
+/* Button Scss End */
+
+/* Responsive İmg & General İmg Scss */
+.responsive-image{
+  max-width:100%;
+  height:auto;
+}
+
+img{
+  vertical-align:middle;
+}
+/* Responsive İmg & General İmg End*/

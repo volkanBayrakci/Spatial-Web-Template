@@ -1,0 +1,128 @@
+.nav{
+  padding-top:3rem;
+  padding-bottom:3rem;
+  z-index:999;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  transition:all .5s ease-in;
+  .container{
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+  }
+  .logo{
+    color:var(--secondary-white);
+    display:inline-block;
+    text-decoration:none;
+    font-size:1.2rem;
+    strong{
+      margin-right:5px;
+      color:var(--primary-white);
+    }
+  }
+  .nav-button{
+    display:none;
+    cursor: pointer;
+    border:none;
+    outline: none;
+    background-color:rgba(144, 144, 144, 0.65);
+    border-radius:4px;
+    padding:0.8rem;
+    .nav-button-icon{
+      width:20px;
+      height:2px;
+      background-color:var(--primary-white);
+      margin-top:3px;
+      &:first-child{
+        margin-top:0;
+      }
+    }
+  }
+  .nav-ul{
+    padding:0;
+    margin:0;
+    display:flex;
+    .nav-close-button{
+      display:none;
+      position: absolute;
+      top:10px;
+      right:10px;
+      color:var(--font-color);
+      transition:all .2s ease-in;
+      &:hover{
+        color:var(--primary-white);
+
+      }
+    }
+    .nav-li{
+      list-style: none;
+      margin-left:3.5rem;
+    }
+    .nav-a{
+      color:#ddd;
+      text-decoration: none;
+      font-size:1rem;
+      text-transform:uppercase;
+      &:hover{
+        color:var(--primary-white);
+      }
+    }
+  }
+  @media (max-width: 991.98px) {
+    .logo{
+      display:none;
+    }
+    .nav-button{
+      display:block;
+    }
+    .nav-ul{
+      transition:all .5s ease-in;
+      position:fixed;
+      left:0;
+      top:0;
+      bottom: 0;
+      flex-direction: column;
+      height:100vh;
+      width:20rem;
+      max-width:60%;
+      transform: translateX(-20rem);
+      padding:0rem 1rem 0rem 0rem;
+      visibility: hidden;
+      opacity:0;
+      background-color:#222;
+      .nav-close-button{
+        display: block;
+      }
+      .nav-li{
+        margin-top:2rem;
+        margin-left:1rem;
+        padding-bottom:1rem;
+        border-bottom:1px solid var(--font-color);
+        &:last-child{
+          border-bottom:0;
+        }
+      }
+    }
+  }
+}
+
+.change{
+  @media(max-width:991.98px){
+    background-color: transparent !important;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    box-shadow: none;
+  }
+  background-color: #222;
+  padding-top:1.5rem;
+  padding-bottom:1.5rem;
+  box-shadow: 0px 0.0375rem 0.125rem 0px rgba(0, 0, 0, 0.15);
+}
+
+.active{
+  visibility: visible !important;
+  opacity:1 !important;
+  transform: translateX(0) !important;
+}

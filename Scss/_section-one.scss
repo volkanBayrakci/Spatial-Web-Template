@@ -1,0 +1,34 @@
+#section-one{
+  padding-top:5.5rem;
+  padding-bottom:4rem;
+  h2{
+    color:var(--title-color);
+    font-size:2.5rem;
+  }
+  .section-one-p{
+    color:var(--secondary-white);
+    font-size:1.5rem;
+  }
+  .section-one-p-p{
+    font-size:0.9rem;
+    line-height:2rem;
+  }
+  .section-one-gutter{
+    padding-left:3.3125rem;
+  }
+  @media(max-width: 991.98px){
+    padding-top:2rem;
+    padding-bottom:2rem;
+    .section-one-gutter{
+      padding-left:0.9375rem;
+    }
+    h2{
+      text-align:center;
+      font-size:1.5rem;
+    }
+    .section-one-p{
+      text-align: center;
+      font-size:1.2rem;
+    }
+  }
+}
