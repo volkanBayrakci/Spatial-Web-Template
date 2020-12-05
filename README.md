@@ -1,1 +1,1 @@
-Web Template
+Spatial Web Template
